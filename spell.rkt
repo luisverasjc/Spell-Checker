@@ -1,11 +1,5 @@
 #lang racket
 
-; *********************************************
-; *  314 Principles of Programming Languages  *
-; *  Spring 2019                              *
-; *  Student Version                          *
-; *********************************************
-
 ;; contains "ctv", "A", and "reduce" definitions
 (require "include.rkt")
 
@@ -72,20 +66,7 @@
       (let ([k (key w)]) ;; create key for word
         (floor (* size(- (* k A) (floor (* k A)))))))))) ;; returns this function
 
-;; -----------------------------------------------------
-;; EXAMPLE HASH FUNCTIONS AND HASH FUNCTION LISTS
-
-;;(define hash-1 (gen-hash-division-method 70111))
-;;(define hash-2 (gen-hash-division-method 89989))
-;;(define hash-3 (gen-hash-multiplication-method 700426))
-;;(define hash-4 (gen-hash-multiplication-method 952))
-
-;;(define hashfl-1 (list hash-1 hash-2 hash-3 hash-4))
-;;(define hashfl-2 (list hash-1 hash-3))
-;;(define hashfl-3 (list hash-2 hash-3))
-;; -----------------------------------------------------
 ;; SPELL CHECKER GENERATOR
-
 (define gen-checker
   (lambda (hashfunctionlist dict)
      (lambda (w)
@@ -97,9 +78,3 @@
          #t
          #f)))))))
 
-;; -----------------------------------------------------
-;; EXAMPLE SPELL CHECKERS
-
-;;(define checker-1 (gen-checker hashfl-1 dictionary))
-;;(define checker-2 (gen-checker hashfl-2 dictionary))
-;;(define checker-3 (gen-checker hashfl-3 dictionary))
